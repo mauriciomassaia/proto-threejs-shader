@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Prototypes - Threejs - Shader</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet" type="text/css">
+    <style>
+      html, body, ul, li, div, h2, a {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        font: 14px/1.5em "Roboto Mono", monospace;
+      }
+
+      h2 {
+        font-weight: 300;
+        line-height: 2rem;
+        padding: 1em 0 1em 2em;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        align-items: strech;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        min-width: 100%;
+        padding: 0.25rem 0;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(.44,.01,.5,.95);
+        -webkit-transition: all 0.25s cubic-bezier(.44,.01,.5,.95);
+        -moz-transition: all 0.25s cubic-bezier(.44,.01,.5,.95);
+        -ms-transition: all 0.25s cubic-bezier(.44,.01,.5,.95);
+      }
+
+      a, a:visited {
+        color: #333;
+      }
+
+      a:hover {
+        background: #f2f2f2;
+        color: #000;
+        padding-left: 12px;
+      }
+
+      a:hover .title {
+        color: rgb(215, 40, 158);
+      }
+
+      a .title {
+        border-right: 1px solid #555;
+        padding: 0 3rem;
+      }
+
+      a .info {
+        color: rgb(44, 177, 215);
+        padding: 0 3rem;
+      }
+
+      @media (max-width: 768px) {
+        h2 {
+          padding: 2rem 1rem;
+        }
+
+        a {
+          flex-direction: column;
+        }
+
+        a .title {
+          border-right: none;
+          border-bottom: 1px solid #555;
+          font-size: 1.25rem;
+          padding: 1rem 2rem;
+        }
+
+        a .info {
+          padding: 1rem 2rem;
+        }
+
+        a:hover {
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Prototypes - Threejs - Shader</h2>
+    <ul><li><a href="proto-01.html" title="click to view - proto / 01"><div class="title">proto / 01</div><div class="info">2 images wave transition<br /></div></a></li></ul>
+  </body>
+</html>
