@@ -1,5 +1,7 @@
 # Proto - Theejs - Shader
 
+![./src/proto-02/ss.png](./src/proto-02/ss.jpg)
+
 ![./src/proto-01/ss.png](./src/proto-01/ss.jpg)
 
 [View prototypes](https://mauriciomassaia.github.io/proto-threejs-shader/)
