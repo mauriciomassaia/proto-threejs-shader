@@ -55,16 +55,6 @@ canvas {
 body {
 	width: 100%;
 	height: 100%;
+	font: 16px/1.5 monospace;
 	overflow: hidden;
-}
-
-.dg .slider {
-  border-radius: 0 !important;
-	padding: 0 1px !important;
-}
-.dg .slider-fg {
-	 border-radius: 0 !important;
-}
-.dg .slider-fg::after {
-	display: none;
 }
