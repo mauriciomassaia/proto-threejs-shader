@@ -21,8 +21,27 @@ let uniforms
 
 let pressed = false
 
-const segments = 256
+const segments = 128
 const size = 1024
+
+var supportsPassive = false
+try {
+  addEventListener('test', null, { get passive() { supportsPassive = true } })
+} catch(e) {}
+
+const listenerOptions = supportsPassive ? { passive:true } : false
+
+function onPress () {
+  pressed = true
+}
+
+function onRelease () {
+  pressed = false
+}
+
+function toggleWireframe () {
+  shaderMaterial.wireframe = !shaderMaterial.wireframe 
+}
 
 function init () {
   camera = new PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 4000)
@@ -53,23 +72,20 @@ function init () {
   renderer.setClearColor(0x111111)
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
-  document.body.appendChild(renderer.domElement)
+  const el = renderer.domElement
+  document.body.appendChild(el)
 
-  renderer.domElement.addEventListener('mousedown', function () {
-    pressed = true
-  })
-
-  renderer.domElement.addEventListener('mouseup', function () {
-    pressed = false
-  })
+  el.addEventListener('mousedown', onPress)
+  el.addEventListener('mouseup', onRelease)
+  el.addEventListener('touchstart', onPress, listenerOptions)
+  el.addEventListener('touchend', onRelease, listenerOptions)
+  el.addEventListener('touchcancel', onRelease, listenerOptions)
+  // el.addEventListener('touchmove', e => e.preventDefault(), listenerOptions)
 
   window.addEventListener('keyup', function (e) {
-    if (e.keyCode === 32) {
-      shaderMaterial.wireframe = !shaderMaterial.wireframe 
-    }
+    if (e.keyCode === 32) toggleWireframe()
   })
-
-  window.addEventListener('resize', onWindowResize, false)
+  window.addEventListener('resize', onWindowResize, listenerOptions)
 
   onWindowResize()
 }
@@ -113,8 +129,13 @@ d.addEventListener('click', function(ev) {
   d.href = renderer.domElement.toDataURL('image/jpeg', 1.0);
   d.download = `mm-blob-${Date.now()}.jpg`
 }, false);
-
 document.body.appendChild(d);
+
+var w = document.createElement('a')
+w.className = 'wireframe-button'
+w.textContent = 'toggle_wireframe'
+w.addEventListener('click', toggleWireframe, false);
+document.body.appendChild(w);
 
 console.log('_ Use spacebar to toggle wireframe.')
 console.log('_ Hold mouse down to revert time.')

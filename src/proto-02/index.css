@@ -1,7 +1,7 @@
-.download-button {
+.download-button,
+.wireframe-button {
   position: fixed;
   bottom: 0;
-  right: 0;
   padding: 1rem 2rem;
   z-index: 2;
   background-color: transparent;
@@ -10,8 +10,17 @@
   transition: all 0.25s ease-out;
 }
 
+.wireframe-button:hover,
 .download-button:hover {
   background-color: #fff;
   color: #000;
   transition: all 0.25s ease-in-out;
+}
+
+.download-button {
+  right: 0;
+}
+
+.wireframe-button {
+  left: 0;
 }
