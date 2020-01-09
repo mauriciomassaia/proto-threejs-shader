@@ -3,7 +3,7 @@ const fs = require('fs')
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 
-const PORT = 3000
+const PORT = 4000
 const app = express()
 
 // list all proto folders
