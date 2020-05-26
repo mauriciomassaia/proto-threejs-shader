@@ -34,6 +34,10 @@ Generate the index.html with a list of links for each prototype.
 
 To deploy `gh-pages` I followed this [awesome article](https://medium.com/linagora-engineering/deploying-your-js-app-to-github-pages-the-easy-way-or-not-1ef8c48424b7). Thanks [Christophe Hamerling](https://github.com/chamerling)
 
+For fresh clones or if you delete the dist folder by mistake please run :
+
+`git worktree add ./dist gh-pages`
+
 
 ---
 
