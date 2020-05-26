@@ -1,8 +1,10 @@
 # Proto - Theejs - Shader
 
-![./src/proto-02/ss.png](./src/proto-02/ss.jpg)
+![./src/proto-02/ss.jpg](./src/proto-02/ss.jpg)
 
-![./src/proto-01/ss.png](./src/proto-01/ss.jpg)
+![./src/proto-01/ss.jpg](./src/proto-01/ss.jpg)
+
+![./src/proto-03/ss.png](./src/proto-03/ss.png)
 
 [View prototypes](https://mauriciomassaia.github.io/proto-threejs-shader/)
 
@@ -38,6 +40,13 @@ For fresh clones or if you delete the dist folder by mistake please run :
 
 `git worktree add ./dist gh-pages`
 
+Updating `gh-pages` branch:
+```
+cd dist/
+git add .
+git commit -m "Update protos"
+git push origin gh-pages
+```
 
 ---
 
