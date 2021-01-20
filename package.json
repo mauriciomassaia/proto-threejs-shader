@@ -31,7 +31,7 @@
     "webpack-dev-middleware": "^3.7.2"
   },
   "dependencies": {
-    "gsap": "^3.0.5",
+    "gsap": "^3.6.0",
     "three": "^0.108.0"
   }
 }
