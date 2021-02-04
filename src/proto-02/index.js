@@ -26,8 +26,8 @@ const size = 1024
 
 var supportsPassive = false
 try {
-  addEventListener('test', null, { get passive() { supportsPassive = true } })
-} catch(e) {}
+  addEventListener('test', null, { get passive () { supportsPassive = true } })
+} catch (e) {}
 
 const listenerOptions = supportsPassive ? { passive:true } : false
 
@@ -40,7 +40,7 @@ function onRelease () {
 }
 
 function toggleWireframe () {
-  shaderMaterial.wireframe = !shaderMaterial.wireframe 
+  shaderMaterial.wireframe = !shaderMaterial.wireframe
 }
 
 function init () {
@@ -100,7 +100,7 @@ function animate () {
   window.requestAnimationFrame(animate)
   render()
 }
-  
+
 function render () {
   if (pressed) {
     uniforms.time.value += (0 - uniforms.time.value) * 0.025
@@ -108,7 +108,6 @@ function render () {
     uniforms.time.value += 0.04
   }
   uniforms.radius.value = Math.cos(Date.now() / 300) * 100 + 150
-  
   mesh.rotation.y += 0.005
   mesh.rotation.x += 0.001
   mesh.rotation.z += 0.003
@@ -125,11 +124,11 @@ window.onload = function () {
 var d = document.createElement('a')
 d.className = 'download-button'
 d.textContent = 'save_image'
-d.addEventListener('click', function(ev) {
-  d.href = renderer.domElement.toDataURL('image/jpeg', 1.0);
+d.addEventListener('click', function (ev) {
+  d.href = renderer.domElement.toDataURL('image/jpeg', 1.0)
   d.download = `mm-blob-${Date.now()}.jpg`
-}, false);
-document.body.appendChild(d);
+}, false)
+document.body.appendChild(d)
 
 var w = document.createElement('a')
 w.className = 'wireframe-button'
