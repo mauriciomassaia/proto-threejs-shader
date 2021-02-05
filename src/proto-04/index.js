@@ -5,13 +5,13 @@
 import vert from './shader.vert'
 import frag from './shader.frag'
 
-import Viewport from '../utils/viewport';
+import * as VIEWPORT from '../viewport/viewport';
 
 import gsap from 'gsap';
 import * as THREE from 'three';
 
 // create three js base scene
-const viewport = new Viewport();
+const viewport = new VIEWPORT.ThreeBasic();
 // enable gui debug
 viewport.enableGUI();
 

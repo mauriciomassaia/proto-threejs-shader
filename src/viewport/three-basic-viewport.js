@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import * as dat from 'dat.gui';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-export default class Viewport {
+export default class ThreeBasicViewport {
     constructor( props ) {
 
         // create initial class states to control on debug panel
