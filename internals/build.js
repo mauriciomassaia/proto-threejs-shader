@@ -52,7 +52,7 @@ console.log(`Building all prototypes, it may take several minutes...
 
 ###
 
-  While you wait go out and get a coffee for Mauricio,
-  he will give you a free hug.
+  While you wait go out and get a coffee for Mauricio or/and Danillo,
+  they will give you a free hug.
 
 ###\n`)
