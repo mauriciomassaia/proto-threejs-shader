@@ -1,10 +1,6 @@
 # Proto - Theejs - Shader
 
-![./src/proto-02/ss.jpg](./src/proto-02/ss.jpg)
-
-![./src/proto-01/ss.jpg](./src/proto-01/ss.jpg)
-
-![./src/proto-03/ss.png](./src/proto-03/ss.png)
+![./src/proto-02/ss.jpg](./src/proto-02/ss.jpg) | ![./src/proto-01/ss.jpg](./src/proto-01/ss.jpg) | ![./src/proto-03/ss.png](./src/proto-03/ss.png) | ![./src/proto-05/ss.png](./src/proto-05/ss.png) | ![./src/proto-06/ss.png](./src/proto-06/ss.png) | ![./src/proto-07/ss.png](./src/proto-07/ss.png) | ![./src/proto-08/ss.png](./src/proto-08/ss.png)
 
 [View prototypes](https://mauriciomassaia.github.io/proto-threejs-shader/)
 
