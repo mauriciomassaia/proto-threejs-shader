@@ -2,7 +2,6 @@
 
 ![./src/proto-02/ss.jpg](./src/proto-02/ss.jpg) 
 ![./src/proto-01/ss.jpg](./src/proto-01/ss.jpg)
-![./src/proto-03/ss.png](./src/proto-03/ss.png)
 ![./src/proto-05/ss.png](./src/proto-05/ss.png) 
 ![./src/proto-06/ss.png](./src/proto-06/ss.png)
 ![./src/proto-07/ss.png](./src/proto-07/ss.png)
