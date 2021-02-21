@@ -1,1 +1,1 @@
-THREE JS - Shaders - Gooey
+THREE JS - Shaders - Blob image mask
