@@ -29,7 +29,7 @@ if (process.argv.indexOf('-all') > -1) {
 } else {
   // remove filter protos that already have the bundles
   protosToBuild = protos.filter(id => {
-    const builtFile = `../dist/bundle.${id}.js`
+    const builtFile = `../docs/bundle.${id}.js`
     const p = path.join(__dirname, builtFile)
     return !fs.existsSync(p)
   })

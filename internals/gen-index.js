@@ -124,15 +124,15 @@ const tpl = `
 </html>
 `
 
-if (!fs.existsSync('./dist')) {
-  fs.mkdirSync('./dist')
-  console.log('Created ./dist folder')
+if (!fs.existsSync('./docs')) {
+  fs.mkdirSync('./docs')
+  console.log('Created ./docs folder')
 }
 
-fs.writeFile('dist/index.html', tpl, 'utf-8', (e) => {
+fs.writeFile('docs/index.html', tpl, 'utf-8', (e) => {
   if (e) {
     console.log('error', e)
     return
   }
-  console.log('dist/index.html file created')
+  console.log('docs/index.html file created')
 })
