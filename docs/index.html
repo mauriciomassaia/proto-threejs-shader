@@ -1,35 +1,9 @@
-const fs = require('fs')
-const path = require('path')
-const packageJson = require('../package.json')
-const { description } = packageJson
 
-const protos = fs.readdirSync('./src').filter(
-  item => item.indexOf('proto-') > -1
-)
-protos.reverse()
-
-const linksList = protos.map((item) => {
-  const title = item.replace(/-/gi, ' / ')
-  let txt = ''
-  const infoPath = path.join(__dirname, '../src', item, 'info.txt')
-
-  if (fs.existsSync(infoPath)) {
-    // Inject info for the current prototype folder
-    let info = fs.readFileSync(infoPath)
-    info = String(info).replace(/\n/gi, '<br />')
-    txt += `<div class="info">${info}</div>`
-  }
-
-  return `<li><a href="${item}.html" title="click to view - ${title}"><div class="title">${title}</div>${txt}</a></li>`
-})
-
-// TODO: Convert this into a proper template
-const tpl = `
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>${description}</title>
+    <title>Prototypes - Threejs - Shader</title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet" type="text/css">
     <style>
@@ -118,21 +92,7 @@ const tpl = `
     </style>
   </head>
   <body>
-    <h2>${description}</h2>
-    <ul>${linksList.join('')}</ul>
+    <h2>Prototypes - Threejs - Shader</h2>
+    <ul><li><a href="proto-10.html" title="click to view - proto / 10"><div class="title">proto / 10</div><div class="info">THREE JS - Shaders - Blob image mask</div></a></li><li><a href="proto-09.html" title="click to view - proto / 09"><div class="title">proto / 09</div><div class="info">THREE JS - Shaders - Fractal Brownian Motion</div></a></li><li><a href="proto-08.html" title="click to view - proto / 08"><div class="title">proto / 08</div><div class="info">THREE JS - Shaders - Gooey</div></a></li><li><a href="proto-07.html" title="click to view - proto / 07"><div class="title">proto / 07</div><div class="info">THREE JS - Textures - Diamond</div></a></li><li><a href="proto-06.html" title="click to view - proto / 06"><div class="title">proto / 06</div><div class="info">THREE JS - Textures - Golden Sphere</div></a></li><li><a href="proto-05.html" title="click to view - proto / 05"><div class="title">proto / 05</div><div class="info">THREE JS - Textures - Crystal</div></a></li><li><a href="proto-04.html" title="click to view - proto / 04"><div class="title">proto / 04</div><div class="info">THREE JS - Starter Pack - Basic THREE.JS structure to build prototypes</div></a></li><li><a href="proto-03.html" title="click to view - proto / 03"><div class="title">proto / 03</div><div class="info">Basic - 01 - Creating vertex and fragment native and using gsap to change same variables</div></a></li><li><a href="proto-02.html" title="click to view - proto / 02"><div class="title">proto / 02</div><div class="info">Blob</div></a></li><li><a href="proto-01.html" title="click to view - proto / 01"><div class="title">proto / 01</div><div class="info">2 images wave transition<br /></div></a></li></ul>
   </body>
 </html>
-`
-
-if (!fs.existsSync('./docs')) {
-  fs.mkdirSync('./docs')
-  console.log('Created ./docs folder')
-}
-
-fs.writeFile('docs/index.html', tpl, 'utf-8', (e) => {
-  if (e) {
-    console.log('error', e)
-    return
-  }
-  console.log('docs/index.html file created')
-})
