@@ -25,13 +25,13 @@ const compiler = webpack(latestProtos.map(
 app.use(webpackDevMiddleware(compiler, { publicPath: '/', logLevel: 'warn' }))
 
 // add static folder if we have common assets
-app.use(express.static('./dist'))
+app.use(express.static('./docs'))
 
 const router = express.Router()
 
 /* GET home page. */
 router.get('/', (req, res, next) =>
-  res.sendFile('./dist/index.html')
+  res.sendFile('./docs/index.html')
 )
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`))

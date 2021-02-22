@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>proto-01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body, ul, li, div, h2, a, p { margin: 0; padding: 0; }
+      html, body { font: 16px/1.5em Menlo, Consolas, monospace; }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.addEventListener('keyup', function (e) {
+        if (e.key === 'Backspace') {
+          var u = window.location.href
+          var i = u.indexOf('/proto-')
+          if (i > -1) window.location.href = u.substring(0, i)
+        }
+      })
+    </script>
+  <script type="text/javascript" src="./bundle.proto-01.js"></script></body>
+</html>
